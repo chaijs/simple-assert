@@ -21,44 +21,26 @@ test-browser: build
 		--R ${REPORTER} \
 		./test/browser/index.html
 
-test-cov: lib-cov
-	@assert_COV=1 NODE_ENV=test ./node_modules/.bin/mocha \
-		--require ./test/bootstrap \
-		--reporter html-cov \
-		$(TESTS) \
-		> coverage.html
+.PHONY: test test-node test-browser 
 
 #
 # Components
 # 
 
-build: components lib/*
+build: components index.js
 	@./node_modules/.bin/component-build --dev
 
 components: component.json
 	@./node_modules/.bin/component-install --dev
 
 #
-# Coverage
-# 
-
-lib-cov:
-	@rm -rf lib-cov
-	@jscoverage lib lib-cov
-
-#
 # Clean up
 # 
 
-clean: clean-components clean-cov
+clean: clean-components 
 
 clean-components:
 	@rm -rf build
 	@rm -rf components
 
-clean-cov:
-	@rm -rf lib-cov
-	@rm -f coverage.html
-
-
-.PHONY: clean clean-components clean-cov test test-cov test-node test-browser lib-cov
+.PHONY: clean clean-components 
