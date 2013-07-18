@@ -2,7 +2,7 @@
     "name": "simple-assert"
   , "repo": "chaijs/simple-assert"
   , "version": "0.0.0"
-  , "description": "Vinalla Assertions"
+  , "description": "Vanilla Assertions"
   , "license": "MIT"
   , "keywords": [
         "assert"
