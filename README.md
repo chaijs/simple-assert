@@ -1,6 +1,10 @@
 # simple-assert
 
-> Vinalla Assertions
+> Vanilla Assertions
+
+A simple `assert` wrapper around [chaijs/assertion-error](https://github.com/chaijs/assertion-error). This probably
+won't be useful to the average user unless you are a minimalist; you probably want [Chai](https://github.com/chaijs/chai).
+We use it to avoid circular dependencies when testing Chai's dependencies.
 
 ## Installation
 
@@ -15,6 +19,57 @@
 `simple-assert` is available as a [component](https://github.com/component/component).
 
     $ component install chaijs/simple-assert
+
+## Usage
+
+### assert (expr[, msg])
+
+* **@param** _{Mixed}_ expression to test for truthiness
+* **@param** _{String}_ message on failure
+
+Perform a truthy assertion.
+
+```js
+var assert = require('simple-assert');
+assert(true, 'true is truthy');
+assert(1, '1 is truthy');
+assert('string', 'string is truthy');
+```
+
+
+### assert.not (expr[, msg])
+
+* **@param** _{Mixed}_ express to test for falsiness
+* **@param** _{String}_ messag eon failure
+
+Perform a falsey assertion.
+
+```js
+db.get(123, function (err, doc) {
+  assert.not(err, 'db.get returned error');
+  // ...
+});
+```
+
+
+### assert.fail ([msg])
+
+* **@param** _{String}_ failure message
+
+Force an `AssertionError` to be thrown.
+
+```js
+switch (res.statusCode) {
+  case 200:
+    // ..
+    break;
+  case 404:
+    // ..
+    break;
+  default:
+    assert.fail('Unknown response statusCode');
+}
+```
 
 ## License
 
