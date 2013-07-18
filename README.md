@@ -1,4 +1,4 @@
-# simple-assert
+# simple-assert [![Build Status](https://travis-ci.org/chaijs/simple-assert.png?branch=master)](https://travis-ci.org/chaijs/simple-assert)
 
 > Vanilla Assertions
 
