@@ -1,6 +1,6 @@
 {
     "name": "simple-assert"
-  , "version": "0.0.0"
+  , "version": "1.0.0"
   , "description": "Vanilla Assertions"
   , "author": "Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com)"
   , "license": "MIT"
