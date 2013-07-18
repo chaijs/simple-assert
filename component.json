@@ -5,11 +5,14 @@
   , "description": "Vinalla Assertions"
   , "license": "MIT"
   , "keywords": [
+        "assert"
     ]
-  , "main": "lib/assert.js"
+  , "main": "index.js"
   , "scripts": [
-        "lib/assert.js"
+        "index.js"
     ]
-  , "dependencies": {}
+  , "dependencies": {
+        "chaijs/assertion-error": "1.0.0"
+    }
   , "development": {}
 }

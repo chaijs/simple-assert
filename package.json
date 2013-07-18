@@ -18,10 +18,10 @@
       "test": "make test"
     }
   , "dependencies": {
+        "assertion-error": "1.0.0"
     }
   , "devDependencies": {
-        "chai": "*"
-      , "component": "*"
+        "component": "*"
       , "mocha": "*"
       , "mocha-phantomjs": "*"
     }
