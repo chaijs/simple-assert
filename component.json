@@ -1,0 +1,15 @@
+{
+    "name": "simple-assert"
+  , "repo": "chaijs/simple-assert"
+  , "version": "0.0.0"
+  , "description": "Vinalla Assertions"
+  , "license": "MIT"
+  , "keywords": [
+    ]
+  , "main": "lib/assert.js"
+  , "scripts": [
+        "lib/assert.js"
+    ]
+  , "dependencies": {}
+  , "development": {}
+}
