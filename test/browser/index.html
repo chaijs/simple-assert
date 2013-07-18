@@ -8,13 +8,12 @@
     <script src="../../node_modules/chai/chai.js"></script>
     <script>
       mocha.setup('bdd')
-      var should = chai.should();
     </script>
     <script src="../../build/build.js"></script>
     <script>
       assert = require('simple-assert');
     </script>
-    <!-- <script src="../test.js"></script> -->
+    <script src="../assert.js"></script>
     <script>onload = function () {
       if (window.mochaPhantomJS) mochaPhantomJS.run()
       else mocha.run();
