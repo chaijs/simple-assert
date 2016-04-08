@@ -1,28 +1,27 @@
 {
-    "name": "simple-assert"
-  , "version": "1.0.0"
-  , "description": "Vanilla Assertions"
-  , "author": "Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com)"
-  , "license": "MIT"
-  , "keywords": [
-    ]
-  , "repository": {
-        "type": "git"
-      , "url": "git@github.com:chaijs/simple-assert.git"
-    }
-  , "engines": {
-      "node": "*"
-    }
-  , "main": "./index"
-  , "scripts": {
-      "test": "make test"
-    }
-  , "dependencies": {
-        "assertion-error": "1.0.0"
-    }
-  , "devDependencies": {
-        "component": "*"
-      , "mocha": "*"
-      , "mocha-phantomjs": "*"
+    "name": "simple-assert",
+    "version": "1.0.0",
+    "description": "Vanilla Assertions",
+    "author": "Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com)",
+    "license": "MIT",
+    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:chaijs/simple-assert.git"
+    },
+    "engines": {
+        "node": "*"
+    },
+    "main": "./index",
+    "scripts": {
+        "test": "make test"
+    },
+    "dependencies": {
+        "assertion-error": "1.0.1"
+    },
+    "devDependencies": {
+        "component": "*",
+        "mocha": "*",
+        "mocha-phantomjs": "*"
     }
 }
