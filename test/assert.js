@@ -1,3 +1,6 @@
+import {AssertionError} from 'assertion-error'
+import {assert, fail, not} from '../dist/bundled.js'
+
 function err (fn, msg) {
   var thrown = false;
   try {
@@ -7,12 +10,12 @@ function err (fn, msg) {
 
     if (msg && msg !== ex.message) {
       var report = 'Expected "' + ex.message + '" to equal "' + msg + '".'
-      throw new assert.AssertionError(report, null, arguments.callee);
+      throw new AssertionError(report);
     }
   }
 
   if (!thrown) {
-    throw new assert.AssertionError('Expected an error.', null, arguments.callee);
+    throw new AssertionError('Expected an error.');
   }
 }
 
@@ -38,26 +41,26 @@ it('assert(expr)', function () {
   }, 'test message');
 });
 
-it('assert.not(expr)', function () {
-  assert.not(false, 'false');
+it('not(expr)', function () {
+  not(false, 'false');
   err(function () {
-    assert.not(true, 'test message');
+    not(true, 'test message');
   }, 'test message');
 
-  assert.not(0, '0');
+  not(0, '0');
   err(function () {
-    assert.not(1, 'test message');
+    not(1, 'test message');
   }, 'test message');
 
-  assert.not(null, 'null');
-  assert.not(undefined, 'undefined');
+  not(null, 'null');
+  not(undefined, 'undefined');
   err(function () {
-    assert.not('string', 'test message');
+    not('string', 'test message');
   }, 'test message');
 });
 
-it('assert.fail(msg)', function () {
+it('fail(msg)', function () {
   err(function () {
-    assert.fail('test message');
+    fail('test message');
   }, 'test message');
 });

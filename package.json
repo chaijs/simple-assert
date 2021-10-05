@@ -1,28 +1,35 @@
 {
-    "name": "simple-assert"
-  , "version": "1.0.0"
-  , "description": "Vanilla Assertions"
-  , "author": "Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com)"
-  , "license": "MIT"
-  , "keywords": [
-    ]
-  , "repository": {
-        "type": "git"
-      , "url": "git@github.com:chaijs/simple-assert.git"
-    }
-  , "engines": {
-      "node": "*"
-    }
-  , "main": "./index"
-  , "scripts": {
-      "test": "make test"
-    }
-  , "dependencies": {
-        "assertion-error": "1.0.0"
-    }
-  , "devDependencies": {
-        "component": "*"
-      , "mocha": "*"
-      , "mocha-phantomjs": "*"
-    }
+  "name": "simple-assert",
+  "version": "1.0.0",
+  "description": "Vanilla Assertions",
+  "author": "Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com)",
+  "license": "MIT",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chaijs/simple-assert.git"
+  },
+  "engines": {
+    "node": ">= 12"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && rollup -c rollup.config.js",
+    "pretest": "npm run build",
+    "test": "karma start karma.conf.cjs"
+  },
+  "dependencies": {
+    "assertion-error": "^2.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "karma": "^6.3.4",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-mocha": "^2.0.1",
+    "mocha": "*",
+    "rollup": "^2.58.0",
+    "typescript": "^4.4.3"
+  }
 }
