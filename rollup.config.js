@@ -13,7 +13,7 @@ export default [
     ]
   },
   {
-    input: './test/assert.js',
+    input: './test.js',
     plugins: [ nodeResolve() ],
     output: [{
       file: './dist/bundled.test.js',

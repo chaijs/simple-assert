@@ -1,5 +1,5 @@
 import {AssertionError} from 'assertion-error'
-import {assert, fail, not} from '../dist/bundled.js'
+import {assert, fail, not} from './dist/bundled.js'
 
 function err (fn, msg) {
   var thrown = false;
