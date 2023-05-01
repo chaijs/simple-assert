@@ -1,6 +1,6 @@
 {
   "name": "simple-assert",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Vanilla Assertions",
   "author": "Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com)",
   "license": "MIT",
@@ -9,8 +9,9 @@
     "type": "git",
     "url": "git@github.com:chaijs/simple-assert.git"
   },
+  "type": "module",
   "engines": {
-    "node": ">= 12"
+    "node": ">= 14.16"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
